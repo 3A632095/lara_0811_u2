@@ -11,18 +11,17 @@
 |
 */
 
-Route::get('say/{name?}',['as'=>'hello.index',function($name=
-                                                       'Everybody'){
-    returnview('welcome');
+Route::get('say/{name?}', ['as'=> 'linjingbo',function ($name='everybody') {
+    return 'hello ,'.$name ;
 }]);
 
-Route::get('dashboard',function(){
-    return'dashboard';
-}]);
+Route::get('deshboard',function (){
+    return 'deshboard';
+});
 
-Route::group(['prefix'=>'admin'],function(){
-    Route::get('dashboard',function(){
-        return'admindashboard';
+Route::group(['prefix'=>'admin'],function (){
+    Route::get('deshboard',function (){
+        return 'admin deshboard';
     });
 });
 
