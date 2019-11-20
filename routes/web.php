@@ -11,8 +11,12 @@
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+//    return view('welcome');
+    return redirect('welcome');
 });
+Route::get('welcome', function () {
+    return view('welcome');
+
 Route::get('say/{name?}', ['as'=> 'linjingbo',function ($name='everybody') {
     return 'hello ,'.$name ;
 }]);
