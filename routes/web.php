@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::get('say/{name?}', ['as'=> 'linjingbo',function ($name='everybody') {
     return 'hello ,'.$name ;
 }]);
